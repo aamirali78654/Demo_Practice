@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity
        Boolean b = dbHelper.registerUserHepler( name, email, pass, gender );
        if(b == true)
        {
-           Toast.makeText(this, "Register insert successfully...!!", Toast.LENGTH_SHORT).show();
+           Toast.makeText(this, "User Register successfully...!!", Toast.LENGTH_SHORT).show();
            reg_name.setText("");
            reg_email.setText("");
            reg_pass.setText("");
