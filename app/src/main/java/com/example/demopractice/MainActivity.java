@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity
 {
-    DbHelper dbHelper = new DbHelper(getApplicationContext());
+    DbHelper dbHelper;
 
     EditText reg_name,reg_email, reg_pass, reg_gender;
 
@@ -19,11 +19,11 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-
         reg_email = (EditText) findViewById(R.id.reg_email);
         reg_pass = (EditText) findViewById(R.id.reg_pass);
         reg_gender = (EditText) findViewById(R.id.reg_gender);
         reg_name = (EditText) findViewById(R.id.reg_name);
+        dbHelper = new DbHelper(getApplicationContext());
     }
 
     public void registerUser(View view)
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity
         String email = reg_email.getText().toString();
         String pass = reg_pass.getText().toString();
         String gender = reg_gender.getText().toString();
-        //------DbHelper class method----------------------->>
+        //-----------DbHelper class method----------------------->>
        Boolean b = dbHelper.registerUserHepler( name, email, pass, gender );
        if(b == true)
        {
