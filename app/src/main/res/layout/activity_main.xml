@@ -39,7 +39,7 @@
         android:gravity="center"
         android:id="@+id/reg_gender"/>
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:text="REGISTER"
