@@ -19,10 +19,10 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        reg_email = (EditText) findViewById(R.id.reg_email);
-        reg_pass = (EditText) findViewById(R.id.reg_pass);
-        reg_gender = (EditText) findViewById(R.id.reg_gender);
-        reg_name = (EditText) findViewById(R.id.reg_name);
+        reg_email =  findViewById(R.id.reg_email);
+        reg_pass =  findViewById(R.id.reg_pass);
+        reg_gender =  findViewById(R.id.reg_gender);
+        reg_name =  findViewById(R.id.reg_name);
         dbHelper = new DbHelper(getApplicationContext());
     }
 
