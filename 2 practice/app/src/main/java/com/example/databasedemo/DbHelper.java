@@ -9,6 +9,7 @@ import androidx.annotation.Nullable;
 
 public class DbHelper extends SQLiteOpenHelper
    {
+       //===========DataBase Create in offline===============>>
        static String  DATABASE_NAME = "Practice_db";
        static int DATABASE_VERSION = 1;
        public DbHelper(@Nullable Context context) {
