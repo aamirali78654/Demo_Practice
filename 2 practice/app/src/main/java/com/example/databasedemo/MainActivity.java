@@ -18,11 +18,13 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
     }
+    //-------------login method---------------------->>
     public void loginStartActivity(View view)
     {
         Intent intent = new Intent(MainActivity.this, Login.class);
         startActivity(intent);
     }
+    //-----------------register method--------------->>
     public  void registerStartActivity(View view)
     {
         startActivity(new Intent(MainActivity.this, Register.class));
