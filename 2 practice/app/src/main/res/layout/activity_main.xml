@@ -6,56 +6,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:padding="20sp"
+    android:orientation="vertical"
     android:gravity="center"
-    android:orientation="vertical">
-    <EditText
-        android:id="@+id/reg_name"
+    android:padding="20dp">
+    <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:padding="10dp"
-        android:hint="Enter Name "
-        android:layout_margin="10dp"
-        android:inputType="text" />
-
-    <EditText
-        android:id="@+id/reg_email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:padding="10dp"
-        android:hint="Email "
-        android:layout_margin="10dp"
-        android:inputType="text" />
-
-
-    <EditText
-        android:id="@+id/reg_password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:padding="10dp"
-        android:layout_margin="10dp"
-        android:hint="Password"
-        android:inputType="textPassword" />
-    <EditText
-        android:id="@+id/reg_gender"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:padding="10dp"
-        android:hint="Gender"
-        android:layout_margin="10dp"
-        android:inputType="text" />
+        android:text="Login"
+        android:textSize="20sp"
+        android:layout_marginBottom="20dp"
+        android:onClick="loginStartActivity"/>
 
     <Button
-        android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:onClick="registerBtn"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        android:text="REGISTER NOW!" />
+        android:text="Register"
+        android:textSize="20sp"
+        android:onClick="registerStartActivity"/>
+
 </LinearLayout>

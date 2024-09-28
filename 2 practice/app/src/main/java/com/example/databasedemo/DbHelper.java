@@ -2,6 +2,7 @@ package com.example.databasedemo;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -28,22 +29,37 @@ public class DbHelper extends SQLiteOpenHelper
            db.execSQL("DROP TABLE IF EXISTS registers");
            onCreate(db);
        }
-       public boolean registerUserD(String name1, String email, String pass, String gender)
+       public boolean registerUserD(String name1, String email1, String pass1, String gender1)
        {
            SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
            ContentValues contentValues = new ContentValues();
            contentValues.put("name",name1);
-           contentValues.put("email",email);
-           contentValues.put("password",pass);
-           contentValues.put("gender",gender);
+           contentValues.put("email",email1);
+           contentValues.put("password",pass1);
+           contentValues.put("gender",gender1);
 
           long l = sqLiteDatabase.insert("",null,contentValues);
            sqLiteDatabase.close();
-           if(l>0)
+
+           if(l > 0)
            {
                return true;
            }
            else {
+               return false;
+           }
+       }
+
+       public boolean loginUser(String e , String p)
+       {
+           SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+           Cursor cursor =  sqLiteDatabase.rawQuery("SELECT * FROM registers WHERE email='"+e+"' AND password = '"+p+"'",null);
+           if(cursor.moveToFirst())
+           {
+               return true;
+           }
+           else
+           {
                return false;
            }
        }
