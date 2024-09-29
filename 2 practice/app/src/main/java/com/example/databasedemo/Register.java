@@ -30,7 +30,7 @@ public class Register extends AppCompatActivity {
         String email = reg_email.getText().toString();
         String password = reg_password.getText().toString();
         String gender = reg_gender.getText().toString();
-        //---------SQLiteDataBase call-------------->>
+        //---------SQLiteDataBase call ------------->>
        boolean b = dbHelper.registerUserD(name, email, password, gender);
        if(b)
        {
