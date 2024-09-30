@@ -34,7 +34,7 @@ public class Register extends AppCompatActivity {
        boolean b = dbHelper.registerUserD(name, email, password, gender);
        if(b)
        {
-           Toast.makeText(this, "User Successfully Register...!", Toast.LENGTH_SHORT).show();
+           Toast.makeText(this, "Successfully Registered...!", Toast.LENGTH_SHORT).show();
            reg_name.setText("");
            reg_email.setText("");
            reg_password.setText("");
