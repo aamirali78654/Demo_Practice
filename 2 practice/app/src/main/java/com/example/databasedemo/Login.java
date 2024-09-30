@@ -35,7 +35,7 @@ public class Login extends AppCompatActivity {
        }
        else
        {
-           Toast.makeText(this, "email and password did'nt matched!", Toast.LENGTH_SHORT).show();
+           Toast.makeText(this, "email and password did not matched...!", Toast.LENGTH_SHORT).show();
        }
     }
 }
