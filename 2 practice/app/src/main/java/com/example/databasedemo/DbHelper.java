@@ -75,8 +75,8 @@ public class DbHelper extends SQLiteOpenHelper
                userId u_id = new userId();
                String name=cursor.getString(1);
                String email =  cursor.getString(2);
-               String gender = cursor.getString(3);
-              //---------user id set Methods---------------
+               String gender = cursor.getString(4);
+              //---------user id set Methods--------------->>
               u_id.setName(name);
               u_id.setEmail(email);
               u_id.setGender(gender);

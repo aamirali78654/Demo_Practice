@@ -31,6 +31,7 @@ public class Login extends AppCompatActivity {
        if(logged)
        {
            Intent intent = new Intent(Login.this, Profile.class);
+           intent.putExtra("key_email",email1);
            startActivity(intent);
        }
        else
