@@ -8,6 +8,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
+import java.util.ArrayList;
+
 public class DbHelper extends SQLiteOpenHelper
    {
        //===========DataBase Create in offline===============>>
@@ -62,5 +64,24 @@ public class DbHelper extends SQLiteOpenHelper
            {
                return false;
            }
+       }
+       public ArrayList<userId> profileLoggedinUser(String email1)
+       {
+           ArrayList<userId> al = new ArrayList<>();
+           SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+           Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM registers WHERE email='"+email1+"'",null);
+           if(cursor.moveToFirst())
+           {
+               userId u_id = new userId();
+               String name=cursor.getString(1);
+               String email =  cursor.getString(2);
+               String gender = cursor.getString(3);
+              //---------user id set Methods---------------
+              u_id.setName(name);
+              u_id.setEmail(email);
+              u_id.setGender(gender);
+              al.add(u_id);
+           }
+           return al;
        }
    }
