@@ -11,8 +11,8 @@ import androidx.annotation.Nullable;
 public class DbHelper extends SQLiteOpenHelper
    {
        //===========DataBase Create in offline===============>>
-       static String  DATABASE_NAME = "Practice_db";
-       static int DATABASE_VERSION = 1;
+       private static String  DATABASE_NAME = "practice_db";
+       private static int DATABASE_VERSION = 1;
        public DbHelper(@Nullable Context context) {
            super(context, DATABASE_NAME, null, DATABASE_VERSION);
        }
@@ -38,10 +38,10 @@ public class DbHelper extends SQLiteOpenHelper
            contentValues.put("password",pass1);
            contentValues.put("gender",gender1);
 
-          long l = sqLiteDatabase.insert("",null,contentValues);
+          long loo = sqLiteDatabase.insert("registers",null,contentValues);
            sqLiteDatabase.close();
 
-           if(l > 0)
+           if(loo > 0)
            {
                return true;
            }
