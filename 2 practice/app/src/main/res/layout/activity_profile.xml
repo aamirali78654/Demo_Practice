@@ -83,8 +83,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="Click NOw"
+        android:text="LOG OUT"
         android:textStyle="bold"
         android:textSize="20sp"
         android:onClick="proButton"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Show All Details"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:onClick="proAllDetails"/>
 </LinearLayout>

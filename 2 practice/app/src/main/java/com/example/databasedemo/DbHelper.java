@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.view.View;
 
 import androidx.annotation.Nullable;
 
@@ -84,4 +85,28 @@ public class DbHelper extends SQLiteOpenHelper
            }
            return al;
        }
+       public ArrayList UserALLdetailsHelper()
+       {
+           ArrayList alUser = new ArrayList();
+           SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+           Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM registers",null);
+           if(cursor.moveToFirst())
+           {
+               ArrayList al = new ArrayList();
+               do {
+                   String name = cursor.getString(1);
+                   String email = cursor.getString(2);
+                   String gender = cursor.getString(4);
+
+                   al.add(name);
+                   al.add(email);
+                   al.add(gender);
+
+                   alUser.add(al);
+
+               }while(cursor.moveToNext());
+           }
+           return alUser;
+       }
+
    }

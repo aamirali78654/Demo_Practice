@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -41,5 +42,11 @@ public class Profile extends AppCompatActivity {
     public void proButton(View view)
     {
         startActivity(new Intent(Profile.this, Login.class));
+    }
+    public void proAllDetails(View view)
+    {
+        DbHelper dbHelper = new DbHelper(this);
+        ArrayList al =dbHelper.UserALLdetailsHelper();
+        Toast.makeText(this, ""+al, Toast.LENGTH_SHORT).show();
     }
 }
