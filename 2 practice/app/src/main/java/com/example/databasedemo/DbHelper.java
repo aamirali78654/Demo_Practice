@@ -121,5 +121,17 @@ public class DbHelper extends SQLiteOpenHelper
                return false;
            }
        }
+       public boolean deleteProfileHelper(String email1)
+       {
+           SQLiteDatabase sqLiteDatabase=this.getWritableDatabase();
+           int i = sqLiteDatabase.delete("registers","email=?",new String[]{email1});
+           if(i > 0)
+           {
+               return true;
+           }
+           else {
+               return false;
+           }
+       }
 
    }

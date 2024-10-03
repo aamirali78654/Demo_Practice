@@ -18,12 +18,29 @@
         android:textSize="50sp"
         android:textStyle="bold"
         android:layout_marginBottom="50dp"/>
-    <ImageView
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/baseline_edit"
-        android:layout_gravity="right"
-        android:onClick="updateProfile"/>
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:layout_gravity="right">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_edit"
+            android:padding="10dp"
+            android:layout_gravity="right"
+            android:onClick="updateProfile"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/delete"
+            android:padding="10dp"
+            android:layout_gravity="right"
+            android:onClick="deleteProfile"/>
+
+    </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
