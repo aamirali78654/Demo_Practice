@@ -105,5 +105,21 @@ public class DbHelper extends SQLiteOpenHelper
            }
            return alUser;
        }
+       public boolean updateProfileHelper(String email1, String name1, String gender1)
+       {
+           SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+           ContentValues values = new ContentValues();
+           values.put("name",name1);
+           values.put("gender",gender1);
+           int i = sqLiteDatabase.update("registers",values,"email=?",new String[]{email1});
+           if(i>0)
+           {
+               return true;
+           }
+           else
+           {
+               return false;
+           }
+       }
 
    }
