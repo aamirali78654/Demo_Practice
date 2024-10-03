@@ -49,4 +49,9 @@ public class Profile extends AppCompatActivity {
         ArrayList al =dbHelper.UserALLdetailsHelper();
         Toast.makeText(this, ""+al, Toast.LENGTH_SHORT).show();
     }
+    //-------------Update Profile method-------------->>
+    public void updateProfile(View view)
+    {
+
+    }
 }

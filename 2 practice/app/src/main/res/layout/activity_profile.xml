@@ -18,6 +18,12 @@
         android:textSize="50sp"
         android:textStyle="bold"
         android:layout_marginBottom="50dp"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_edit"
+        android:layout_gravity="right"
+        android:onClick="updateProfile"/>
 
     <LinearLayout
         android:layout_width="match_parent"
