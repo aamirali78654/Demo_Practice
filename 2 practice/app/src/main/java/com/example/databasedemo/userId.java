@@ -1,6 +1,8 @@
 package com.example.databasedemo;
 
-public class userId
+import java.io.Serializable;
+
+public class userId implements Serializable
      {
          private String name;
          private String email;

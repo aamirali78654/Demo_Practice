@@ -17,6 +17,7 @@ import java.util.ArrayList;
 public class Profile extends AppCompatActivity {
      TextView pro_name, pro_email, pro_gender;
      String email1;
+    userId u_id;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,17 +33,18 @@ public class Profile extends AppCompatActivity {
     public void getUserMethod()
     {
         DbHelper dbHelper = new DbHelper(this);
-      ArrayList<userId> al = dbHelper.profileLoggedinUser(email1);
-     userId u_id = al.get(0);
-     pro_name.setText(u_id.getName());
-     pro_email.setText(u_id.getEmail());
-     pro_gender.setText(u_id.getGender());
+        ArrayList<userId> al = dbHelper.profileLoggedinUser(email1);
+        u_id = al.get(0);
+       pro_name.setText(u_id.getName());
+       pro_email.setText(u_id.getEmail());
+       pro_gender.setText(u_id.getGender());
 
     }
     public void proButton(View view)
     {
         startActivity(new Intent(Profile.this, Login.class));
     }
+
     public void proAllDetails(View view)
     {
         DbHelper dbHelper = new DbHelper(this);
@@ -52,6 +54,8 @@ public class Profile extends AppCompatActivity {
     //-------------Update Profile method-------------->>
     public void updateProfile(View view)
     {
-
+        Intent intent = new Intent(Profile.this, UpdateProfile.class);
+        intent.putExtra("key_update",u_id);
+        startActivity(intent);
     }
 }
