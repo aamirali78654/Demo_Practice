@@ -23,25 +23,35 @@ public class Register extends AppCompatActivity {
         dbHelper = new DbHelper(getApplicationContext());
 
     }
+
     public void registerBtn(View view)
     {
         String name = reg_name.getText().toString();
         String email = reg_email.getText().toString();
         String password = reg_password.getText().toString();
         String gender = reg_gender.getText().toString();
-        //---------SQLiteDataBase call ------------->>
-       boolean b = dbHelper.registerUserD(name, email, password, gender);
-       if(b)
-       {
-           Toast.makeText(this, "Successfully Registered...!", Toast.LENGTH_SHORT).show();
-           reg_name.setText("");
-           reg_email.setText("");
-           reg_password.setText("");
-           reg_gender.setText("");
-       }
-       else
-       {
-           Toast.makeText(this, "ERROR...!", Toast.LENGTH_SHORT).show();
-       }
+
+        boolean b1 = dbHelper.emailExistsHelper(email);
+        if(b1)
+        {
+            Toast.makeText(this, "you have already exists...!", Toast.LENGTH_SHORT).show();
+        }
+        else
+        {
+            //---------SQLiteDataBase call ------------->>
+            boolean b = dbHelper.registerUserD(name, email, password, gender);
+            if(b)
+            {
+                Toast.makeText(this, "Successfully Registered...!", Toast.LENGTH_SHORT).show();
+                reg_name.setText("");
+                reg_email.setText("");
+                reg_password.setText("");
+                reg_gender.setText("");
+            }
+            else
+            {
+                Toast.makeText(this, "ERROR...!", Toast.LENGTH_SHORT).show();
+            }
+        }
     }
 }

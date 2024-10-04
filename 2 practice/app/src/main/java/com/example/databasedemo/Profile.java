@@ -89,7 +89,6 @@ public class Profile extends AppCompatActivity {
                 {
                     Toast.makeText(Profile.this, "Failed..", Toast.LENGTH_SHORT).show();
                 }
-
             }
         });
         builder.show();

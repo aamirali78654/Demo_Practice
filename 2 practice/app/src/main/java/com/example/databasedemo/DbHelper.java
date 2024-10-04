@@ -133,5 +133,19 @@ public class DbHelper extends SQLiteOpenHelper
                return false;
            }
        }
+       public boolean emailExistsHelper(String email1)
+       {
+           SQLiteDatabase sqLiteDatabase=this.getReadableDatabase();
+           Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM registers WHERE email='"+email1+"' ",null);
+           if(cursor.moveToFirst())
+           {
+               return true;
+           }
+           else
+           {
+               return false;
+           }
+
+       }
 
    }
