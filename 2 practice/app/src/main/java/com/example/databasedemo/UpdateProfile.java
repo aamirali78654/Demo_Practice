@@ -45,7 +45,7 @@ public class UpdateProfile extends AppCompatActivity {
         }
         else
         {
-            Toast.makeText(this, "Error...!!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Error...!", Toast.LENGTH_SHORT).show();
         }
 
     }
