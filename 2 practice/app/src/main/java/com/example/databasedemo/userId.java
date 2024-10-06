@@ -1,7 +1,7 @@
 package com.example.databasedemo;
 
 import java.io.Serializable;
-
+//-------userid implements serializable---------->>
 public class userId implements Serializable
      {
          private String name;
