@@ -38,7 +38,7 @@ public class Register extends AppCompatActivity {
         }
         else
         {
-            //---------SQLiteDataBase call method--------->>
+            //---------SQLiteDataBase call methods and DbHelper class include--------->>
             boolean b = dbHelper.registerUserD(name, email, password, gender);
             if(b)
             {
