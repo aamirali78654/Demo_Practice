@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class DbHelper extends SQLiteOpenHelper
    {
-       //===========DataBase Create in offline============>>
+       //===========DataBase Create in offline==========>>
        private static String  DATABASE_NAME = "practice_db";
        private static int DATABASE_VERSION = 1;
        public DbHelper(@Nullable Context context) {
