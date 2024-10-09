@@ -27,7 +27,7 @@ public class UpdateProfile extends AppCompatActivity {
         up_name = findViewById(R.id.up_name);
         up_gender = findViewById(R.id.up_gender);
          user = (userId) getIntent().getSerializableExtra("key_update");
-        //-------- set text by userId class and many methods includes ------->>
+        //--- set text by userId class and many methods includes ------->>
         up_email.setText(user.getEmail());
         up_name.setText(user.getName());
         up_gender.setText(user.getGender());
