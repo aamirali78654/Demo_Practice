@@ -75,7 +75,7 @@ public class Profile extends AppCompatActivity {
 
             }
         });
-        //-----------Positive Button------------------->>
+        //-----------Positive Button------------->>
         builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
