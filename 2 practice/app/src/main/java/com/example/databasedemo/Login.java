@@ -21,7 +21,7 @@ public class Login extends AppCompatActivity {
         log_password = findViewById(R.id.log_password);
     }
 
-    //---------- login button's method ------------>>
+    //---------- login button method ------------>>
     public void loginBtn(View view)
     {
         String email1 = log_email.getText().toString();
